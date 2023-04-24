@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Facebook - 登入或註冊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="window"> <!-- 隱藏的div，其ID為"window" -->
+        <div class="page page-front"> <!-- 具有"page"和"page-front" CSS類別的div -->
+            <div class="page-content"> <!-- 具有"page-content" CSS類別的div -->
+                <div class="input-row"> <!-- 表單的輸入欄位區域 -->
+                    <input id="username" type="text"  placeholder="電子郵件地址或手機號碼"/> <!-- 使用者名稱的輸入欄位，包含ID、型別和CSS類別屬性 -->
+                </div>
+                <div class="input-row"> <!-- 表單的輸入欄位區域 -->
+                    <input id="password" type="password" placeholder="密碼"/> <!-- 密碼的輸入欄位，包含ID、型別和CSS類別屬性 -->
+                </div>
+                <div class="input-row perspective"> <!-- 表單的輸入欄位區域，具有"perspective" CSS類別 -->
+                    <button id="submit"> <!-- 登入按鈕，包含ID、CSS類別以及動畫效果屬性 -->
+                        <span class="default">登入</span> <!-- 登入按鈕的標籤 -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 id="forget">忘記密碼?</h1>
+    <div class="input-row perspective"> <!-- 表單的輸入欄位區域，具有"perspective" CSS類別 -->
+        <button id="create"> <!-- 登入按鈕，包含ID、CSS類別以及動畫效果屬性 -->
+            <span class="default">建立新帳號</span> <!-- 登入按鈕的標籤 -->
+        </button>
+    </div>
+    <h1 id="word">為名人、品牌或商家建立粉絲專頁。</h1>
+    <script src="main.js"></script>
+</body>
+</html>

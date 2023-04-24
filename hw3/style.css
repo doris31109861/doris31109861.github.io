@@ -1,0 +1,119 @@
+body{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+#window {
+    /* 設定為絕對定位 */
+    position: absolute;
+    /* 設定距離頂部 50% */
+    top: 30%;
+    /* 設定距離左側 50% */
+    left: 70%;
+    /* 設定水平和垂直居中 */
+    transform: translate(-50%, -50%);
+    /* 可設定其他視窗大小 */
+    width: 300px;
+    /* 可設定其他視窗高度 */
+    height: 250px;
+    /* 可設定其他背景色、邊框等樣式 */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px; /* 將輸入欄位變成橢圓形 */
+    border: 1px solid #D0D0D0; /* 邊框寬度、樣式、顏色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* 可設定其他層級 */
+    z-index: 2;
+}
+
+/* 使用者名稱輸入欄位 */
+#username {
+    /* 更改寬度 */
+    width: 100%;
+    /* 更改高度 */
+    height: 40px;
+    /* 可以根據需要添加其他樣式，例如字體大小、邊框、邊距等 */
+    border-radius: 5px; /* 將輸入欄位變成橢圓形 */
+    margin-bottom: 10px; /* 增加底部間距 */
+    border: 1px solid #D0D0D0; /* 邊框寬度、樣式、顏色 */
+}
+
+/* 密碼輸入欄位 */
+#password {
+    /* 更改寬度 */
+    width: 100%;
+    /* 更改高度 */
+    height: 40px;
+    /* 可以根據需要添加其他樣式，例如字體大小、邊框、邊距等 */
+    border-radius: 5px; /* 將輸入欄位變成橢圓形 */
+    margin-bottom: 10px; /* 增加底部間距 */
+    border: 1px solid #D0D0D0; /* 邊框寬度、樣式、顏色 */
+}
+
+#submit{
+    /* 更改寬度 */
+    width: 102%;
+    /* 更改高度 */
+    height: 40px;
+    /* 可以根據需要添加其他樣式，例如字體大小、邊距等 */
+    border-radius: 5px; /* 將輸入欄位變成橢圓形 */
+    margin-bottom: 10px; /* 增加底部間距 */
+    border: none; /* 移除邊框 */
+    background-color: #0066CC; /* 設定按鈕底色 */
+    color: #fff; /* 設定文字顏色 */
+    font-size: 18px; /* 設定字體大小為18px */
+}
+
+#forget{
+    position: absolute;
+    /* 設定距離頂部 50% */
+    top: 33%;
+    /* 設定距離左側 50% */
+    left: 68%;
+    z-index: 3;
+    font-size: 16px; /* 設定字體大小為16px */
+    color: #0066CC; /* 設定文字顏色為紅色 */
+}
+#forget::after {
+    content: "";
+    display: block;
+    width: 400%; /* 設定寬度為100%，即與 #forget 標題同寬 */
+    height: 1px; /* 設定高度為2px */
+    background-color: #ddd; /* 設定背景顏色為灰色 */
+    position: absolute;
+    bottom: -15px; /* 將灰色線向下移動5px */
+    left: -150%; /* 設定與 #forget 標題左對齊 */
+}
+
+#create{
+    position: absolute;
+    /* 設定距離頂部 50% */
+    top: 40%;
+    /* 設定距離左側 50% */
+    left: 66%;
+    /* 更改寬度 */
+    width: 8%;
+    /* 更改高度 */
+    height: 40px;
+    z-index: 3;
+    /* 可以根據需要添加其他樣式，例如字體大小、邊距等 */
+    border-radius: 5px; /* 將輸入欄位變成橢圓形 */
+    margin-bottom: 10px; /* 增加底部間距 */
+    border: none; /* 移除邊框 */
+    background-color: #009100; /* 設定按鈕底色 */
+    color: #fff; /* 設定文字顏色 */
+    font-size: 18px; /* 設定字體大小為18px */
+}
+
+#word{
+    position: absolute;
+    /* 設定距離頂部 50% */
+    top: 47%;
+    /* 設定距離左側 50% */
+    left: 65%;
+    z-index: 3;
+    font-size: 14px; /* 設定字體大小為16px */
+    color: #000000; /* 設定文字顏色為紅色 */
+}
