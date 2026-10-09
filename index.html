@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doris Tseng 曾苔湘</title>
+<meta name="description" content="Doris Tseng（曾苔湘）— NSYSU EE master's student, Data Science Lab. Projects in RAG/LLM, robotics, networking and systems.">
+<style>
+  /* 顏色以變數定義，深色模式時覆寫 */
+  :root {
+    --bg: #fbfaf8; --surface: #ffffff; --text: #1f2328; --muted: #5d6670;
+    --line: #e4e1dc; --accent: #b4442e; --accent-soft: #f6e7e3; --chip: #f1efeb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15171a; --surface: #1c1f23; --text: #e8e6e3; --muted: #a2a9b1;
+      --line: #2c3036; --accent: #e57a62; --accent-soft: #3a2621; --chip: #262a2f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 -apple-system, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 56px 0 28px; border-bottom: 1px solid var(--line); }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+  h1 { font-size: clamp(28px, 5vw, 40px); margin: 0; letter-spacing: -0.01em; }
+  h1 small { font-size: 0.55em; color: var(--muted); font-weight: 500; margin-left: 8px; }
+  .tagline { color: var(--muted); margin: 10px 0 18px; max-width: 680px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .links a {
+    border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px;
+    background: var(--surface); font-size: 14px;
+  }
+  .lang-toggle {
+    border: 1px solid var(--line); background: var(--surface); color: var(--text);
+    border-radius: 8px; padding: 6px 12px; cursor: pointer; font: inherit; font-size: 14px;
+  }
+
+  h2 { font-size: 20px; margin: 44px 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    overflow: hidden; display: flex; flex-direction: column;
+  }
+  .card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--chip); display: block; }
+  .card .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .card h3 { margin: 0; font-size: 17px; }
+  .card .meta { color: var(--muted); font-size: 13px; }
+  .card p { margin: 0; font-size: 14.5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
+  .chip { background: var(--chip); border-radius: 6px; padding: 2px 8px; font-size: 12.5px; color: var(--muted); }
+  .card.featured { grid-column: 1 / -1; }
+  @media (min-width: 720px) {
+    .card.featured { flex-direction: row; }
+    .card.featured img { width: 48%; aspect-ratio: auto; }
+  }
+
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .panel ul { margin: 0; padding-left: 18px; }
+  .panel li { margin: 4px 0; font-size: 14.5px; }
+  footer { color: var(--muted); font-size: 13px; padding: 40px 0 56px; }
+
+  /* 語言切換：只顯示目前語言的內容 */
+  [data-lang="en"] .zh, [data-lang="zh"] .en { display: none; }
+</style>
+</head>
+<body data-lang="zh">
+<header>
+  <div class="wrap">
+    <div class="top">
+      <h1>曾苔湘<small>Tai-Hsiang (Doris) Tseng</small></h1>
+      <button class="lang-toggle" id="langBtn" aria-label="Switch language">English</button>
+    </div>
+    <p class="tagline zh">國立中山大學電機工程學系碩士生（數據科學實驗室，2025–2027），逢甲大學資訊工程學系畢業。研究方向是結合 RAG 與 LLM，為時間序列異常偵測產生可解釋的報告。</p>
+    <p class="tagline en">M.S. student in Electrical Engineering at National Sun Yat-sen University (Data Science Lab, 2025–2027), B.S. in Computer Science from Feng Chia University. I work on combining RAG and LLMs to generate explainable reports for time-series anomaly detection.</p>
+    <div class="links">
+      <a href="https://github.com/doris31109861">GitHub</a>
+      <a href="mailto:a31109861@gmail.com">a31109861@gmail.com</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2><span class="zh">專案</span><span class="en">Projects</span></h2>
+  <div class="grid">
+
+    <article class="card featured">
+      <img src="https://raw.githubusercontent.com/doris31109861/strawberry-picking-robot/main/docs/demo.gif" alt="Robot arm picking a strawberry" loading="lazy">
+      <div class="body">
+        <h3><a href="https://github.com/doris31109861/strawberry-picking-robot"><span class="zh">智慧採草莓機器人</span><span class="en">Strawberry-Picking Robot</span></a></h3>
+        <div class="meta"><span class="zh">畢業專題・逢甲大學・4 人團隊</span><span class="en">Capstone · Feng Chia University · team of four</span></div>
+        <p class="zh">Jetson Nano 搭配深度攝影機與 YOLOv4-tiny 辨識成熟草莓。我負責機械手臂控制：透過 PCA9685 驅動 6 軸舵機，逐格量測影像座標與深度對應的舵機角度建立查表，並利用角度隨深度線性變化的規律取代逆運動學。</p>
+        <p class="en">A Jetson Nano with a depth camera and YOLOv4-tiny finds ripe strawberries. I wrote the arm control: a PCA9685 drives a 6-axis servo arm, and image position plus depth map to servo angles through a lookup table measured cell by cell, using the angles' linear change with depth instead of inverse kinematics.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Jetson Nano</span><span class="chip">PCA9685</span><span class="chip">RealSense</span><span class="chip">YOLOv4-tiny</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://raw.githubusercontent.com/doris31109861/network-router-simulator/main/docs/delay.png" alt="RTT and queuing delay chart" loading="lazy">
+      <div class="body">
+        <h3><a href="https://github.com/doris31109861/network-router-simulator"><span class="zh">網路 Router 模擬器</span><span class="en">Network Router Simulator</span></a></h3>
+        <div class="meta"><span class="zh">計算機網路・中山大學</span><span class="en">Computer Networks · NSYSU</span></div>
+        <p class="zh">Client–Router–Server 三節點模擬，自訂 MAC/IP/UDP 表頭，以 mutex 與 condition variable 實作 5 個執行緒共用的佇列，量測 RTT 與排隊延遲。</p>
+        <p class="en">A three-node client–router–server simulation with hand-built MAC/IP/UDP headers, a mutex + condition-variable queue shared by five router threads, and per-packet RTT and queuing-delay measurement.</p>
+        <div class="chips"><span class="chip">C / C++</span><span class="chip">POSIX sockets</span><span class="chip">pthreads</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://raw.githubusercontent.com/doris31109861/faculty-website-php-mysql/main/docs/demo.gif" alt="Faculty website and admin pages" loading="lazy">
+      <div class="body">
+        <h3><a href="https://github.com/doris31109861/faculty-website-php-mysql"><span class="zh">教授個人網站與後台</span><span class="en">Faculty Profile Website</span></a></h3>
+        <div class="meta"><span class="zh">資料庫系統・逢甲大學（98 分）</span><span class="en">Database Systems · FCU (98/100)</span></div>
+        <p class="zh">以 MySQL 重新架設教授個人網站，後台提供論文、著作、獲獎、計畫、經歷、課表 6 張資料表的新增／查詢／修改／刪除。</p>
+        <p class="en">A professor's website rebuilt on MySQL, with an admin back-end providing CRUD for six tables: papers, books, awards, projects, experience and schedule.</p>
+        <div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">JavaScript</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://raw.githubusercontent.com/doris31109861/opencv-image-processing/main/docs/bilinear-resize/scaled_1.5x.png" alt="Bilinear interpolation result" loading="lazy">
+      <div class="body">
+        <h3><a href="https://github.com/doris31109861/opencv-image-processing"><span class="zh">影像處理實作</span><span class="en">Image Processing with OpenCV</span></a></h3>
+        <div class="meta"><span class="zh">數位影像處理・逢甲大學</span><span class="en">Digital Image Processing · FCU</span></div>
+        <p class="zh">以 C++ 逐像素實作雙線性內插縮放、加權灰階與簽名疊圖；用 OpenCV 繪圖函式製作貪吃蛇。</p>
+        <p class="en">Bilinear-interpolation resizing, weighted grayscale and signature overlay written pixel by pixel in C++, plus a Snake game drawn with OpenCV.</p>
+        <div class="chips"><span class="chip">C++</span><span class="chip">Python</span><span class="chip">OpenCV</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="body">
+        <h3><a href="https://github.com/doris31109861/mmm-rag-finance">MMM-RAG</a></h3>
+        <div class="meta"><span class="zh">碩士研究・論文重現</span><span class="en">Graduate research · paper reproduction</span></div>
+        <p class="zh">重現 ICPADS 2025 的多代理多模態 RAG 框架，應用於財經圖表問答（FinMME），以 4-bit 量化在單張 8GB 顯卡運行：雙特徵資料庫、知識圖譜、任務拆解、三路檢索與共識投票。</p>
+        <p class="en">A reproduction of the ICPADS 2025 multi-agent multimodal RAG framework for financial-chart question answering (FinMME), running on one 8 GB GPU with 4-bit models: dual feature databases, a knowledge graph, task decomposition, three-way retrieval and consensus voting.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Transformers</span><span class="chip">FAISS</span><span class="chip">LlamaIndex</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="body">
+        <h3><a href="https://github.com/doris31109861/sic-xe-assembler"><span class="zh">SIC/XE 兩階段組譯器</span><span class="en">SIC/XE Two-Pass Assembler</span></a></h3>
+        <div class="meta"><span class="zh">系統程式・逢甲大學（91 分）</span><span class="en">System Programming · FCU (91/100)</span></div>
+        <p class="zh">以課程範本為基礎完成組譯器，支援 Format 1–4、立即／間接／索引定址、PC／Base 相對定址與 H/T/M/E 目的程式輸出。</p>
+        <p class="en">Built on the course framework: formats 1–4, immediate/indirect/indexed addressing, PC/base-relative displacement and H/T/M/E object-program output.</p>
+        <div class="chips"><span class="chip">C</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="body">
+        <h3><a href="https://github.com/doris31109861/c-data-structures-projects"><span class="zh">C 資料結構與作業系統作業</span><span class="en">C Data Structures &amp; OS</span></a></h3>
+        <div class="meta"><span class="zh">逢甲大學</span><span class="en">Feng Chia University</span></div>
+        <p class="zh">BST＋Heap 拍賣平台、銀行櫃台排隊模擬、由前序與中序重建二元樹、fork() Collatz、終端機小恐龍遊戲。</p>
+        <p class="en">A BST + heap marketplace, a bank-teller queue simulation, tree reconstruction from traversals, a fork() Collatz program and a terminal dino game.</p>
+        <div class="chips"><span class="chip">C</span><span class="chip">Linux</span></div>
+      </div>
+    </article>
+  </div>
+
+  <h2><span class="zh">經歷與獲獎</span><span class="en">Experience &amp; honors</span></h2>
+  <div class="cols">
+    <div class="panel">
+      <ul class="zh">
+        <li>中山大學數據科學實驗室 碩士研究生（2025/09–）</li>
+        <li>教育部「學海築夢」：貝里斯 San Pedro 議會實習（2022）</li>
+        <li>2022 AI 互動教育體驗營 營隊助教</li>
+      </ul>
+      <ul class="en">
+        <li>Graduate researcher, Data Science Lab, NSYSU (Sep 2025–)</li>
+        <li>MOE "Dream Building Overseas" intern, San Pedro Town Council, Belize (2022)</li>
+        <li>Teaching assistant, 2022 AI Interactive Education Camp</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <ul class="zh">
+        <li>ICPC 台灣站 榮譽獎；NCPC 晉級複賽；CPE 進階級</li>
+        <li>110 學年度微積分數位教學作品競賽 優等獎</li>
+        <li>機器人競賽：FTC Best Control Award、WRO 台灣總決賽佳作、FLL 研究品質第一名</li>
+        <li>TOEIC 785</li>
+      </ul>
+      <ul class="en">
+        <li>ICPC Taiwan Honorable Mention; NCPC finalist; CPE Advanced Level</li>
+        <li>Calculus Digital Teaching Work Competition, Excellence Award (2022)</li>
+        <li>Robotics: FTC Best Control Award, WRO Finals Honorable Mention, FLL Research 1st Place</li>
+        <li>TOEIC 785</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="wrap">© 2026 Tai-Hsiang (Doris) Tseng</footer>
+
+<script>
+  // 中英切換；記住上次選擇（瀏覽器不允許存取時就忽略）
+  const btn = document.getElementById('langBtn');
+  function setLang(lang) {
+    document.body.dataset.lang = lang;
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+    btn.textContent = lang === 'zh' ? 'English' : '中文';
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+  let saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  setLang(saved || (navigator.language.startsWith('zh') ? 'zh' : 'en'));
+  btn.addEventListener('click', () => setLang(document.body.dataset.lang === 'zh' ? 'en' : 'zh'));
+</script>
+</body>
+</html>
