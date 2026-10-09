@@ -1,5 +1,8 @@
 # doris31109861.github.io
 
+> 此頁面於 2026/10 以 AI（Claude）協助製作。
+> Built with AI assistance (Claude) in October 2026.
+
 個人作品集網站（GitHub Pages）：https://doris31109861.github.io/
 
 - `index.html`：單一頁面，中英切換、深淺色自動切換、手機版排版；專案卡片的圖片直接引用各 repo 的 GIF／圖表。
