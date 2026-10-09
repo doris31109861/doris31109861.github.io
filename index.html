@@ -48,6 +48,8 @@
     overflow: hidden; display: flex; flex-direction: column;
   }
   .card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--chip); display: block; }
+  /* 圖表與截圖完整顯示（不裁切），照片類才用 cover 填滿 */
+  .card img.fit { object-fit: contain; padding: 8px; background: #fff; }
   .card .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
   .card h3 { margin: 0; font-size: 17px; }
   .card .meta { color: var(--muted); font-size: 13px; }
@@ -102,7 +104,7 @@
     </article>
 
     <article class="card">
-      <img src="https://raw.githubusercontent.com/doris31109861/network-router-simulator/main/docs/delay.png" alt="RTT and queuing delay chart" loading="lazy">
+      <img src="https://raw.githubusercontent.com/doris31109861/network-router-simulator/main/docs/delay.png" class="fit" alt="RTT and queuing delay chart" loading="lazy">
       <div class="body">
         <h3><a href="https://github.com/doris31109861/network-router-simulator"><span class="zh">網路 Router 模擬器</span><span class="en">Network Router Simulator</span></a></h3>
         <div class="meta"><span class="zh">計算機網路・中山大學</span><span class="en">Computer Networks · NSYSU</span></div>
@@ -113,7 +115,7 @@
     </article>
 
     <article class="card">
-      <img src="https://raw.githubusercontent.com/doris31109861/faculty-website-php-mysql/main/docs/demo.gif" alt="Faculty website and admin pages" loading="lazy">
+      <img src="https://raw.githubusercontent.com/doris31109861/faculty-website-php-mysql/main/docs/demo.gif" class="fit" alt="Faculty website and admin pages" loading="lazy">
       <div class="body">
         <h3><a href="https://github.com/doris31109861/faculty-website-php-mysql"><span class="zh">教授個人網站與後台</span><span class="en">Faculty Profile Website</span></a></h3>
         <div class="meta"><span class="zh">資料庫系統・逢甲大學（98 分）</span><span class="en">Database Systems · FCU (98/100)</span></div>
@@ -124,7 +126,7 @@
     </article>
 
     <article class="card">
-      <img src="https://raw.githubusercontent.com/doris31109861/opencv-image-processing/main/docs/bilinear-resize/scaled_1.5x.png" alt="Bilinear interpolation result" loading="lazy">
+      <img src="https://raw.githubusercontent.com/doris31109861/opencv-image-processing/main/docs/bilinear-resize/scaled_1.5x.png" class="fit" alt="Bilinear interpolation result" loading="lazy">
       <div class="body">
         <h3><a href="https://github.com/doris31109861/opencv-image-processing"><span class="zh">影像處理實作</span><span class="en">Image Processing with OpenCV</span></a></h3>
         <div class="meta"><span class="zh">數位影像處理・逢甲大學</span><span class="en">Digital Image Processing · FCU</span></div>
